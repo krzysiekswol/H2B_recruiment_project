@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/c00dc3ee22.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css">
   <title>zadanie testowe frontend</title>
 </head>
@@ -13,12 +14,17 @@
   <div class="container">
     <div class="box">
       <h1 class="title">Unsplash</h1>
-      <h3 class="subtitle">The internet's source of freely-usable images.<br> Powered by creators everywhere</h3>
-
-      <input type="text">
+      <h4 class="subtitle">The internet's source of <a class='unsplashLink' href="https://unsplash.com/">freely-usable images.</a><br> Powered by creators everywhere</h4>
+      <div class="input-group">
+        <button class="btn" onclick="searchPhotos()"><i class="fas fa-search"></i></button>
+        <input type="text" value="" placeholder="Search free high-resolution photos" id="search">
+        <!-- <button class="clear-field"><i class="fas fa-times"></i></button> -->
+      </div>
+      
       <p>Trending: flower, wallpapers, backgrounds, happy, love</p>
     </div>
 
   </div>
+  <script src="./js/app.js"></script>
 </body>
 </html>
