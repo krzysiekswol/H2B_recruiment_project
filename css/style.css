@@ -196,8 +196,8 @@ font-size: 1rem;
 
 .modal{
   position: absolute;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -214,7 +214,7 @@ font-size: 1rem;
   grid-column: 1/ 4;
   /* flex */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .middle{
@@ -239,7 +239,7 @@ font-size: 1rem;
   grid-column: 1/4;
   /* flex */
   display:flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .bottom-right{
@@ -249,7 +249,7 @@ font-size: 1rem;
   grid-column: 6/9;
   /* flex */
   display:flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 .close{
@@ -266,9 +266,14 @@ font-size: 1rem;
   font-size: 0.9rem;
   opacity: 0.8;
 }
-.location{
+.author, .location{
   margin-left: 5%;
 }
+.date{
+  margin-right: 5%;
+}
+
+
 
 
 .disactive{
