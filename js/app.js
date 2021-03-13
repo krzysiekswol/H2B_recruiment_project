@@ -1,6 +1,4 @@
-
 searchPhotos = () => {
-
 let key= `WSkFlomRD-nNTRdXWHDwj4pKPvJU2n3IBJLc6HQ4LiQ`;
 let query = document.getElementById("search").value;
 let url= `https://api.unsplash.com/search/collections/?client_id=${key}&query=${query}&per_page=12`
@@ -9,10 +7,6 @@ let url= `https://api.unsplash.com/search/collections/?client_id=${key}&query=${
   .then(function (data) {
     console.log(data.results);
     data.results.map(item => {
-      
-      // let img = document.createElement('img');
-      // img.classList.add('pictures')
-      // img.src= `${item.urls.small}`
       let div = document.createElement('div');
       div.setAttribute('class', 'pics');
       div.innerHTML = `<img src= "${item.cover_photo.urls.small}" class="pictures"><div class="tags">${item.title.toUpperCase()}<div>`;
@@ -35,48 +29,47 @@ let url= `https://api.unsplash.com/search/collections/?client_id=${key}&query=${
         .then((resp) => resp.json())
         .then(function (data) {
         let location = data.location.name;
-        if(location === null) {
-          location = "no location for this picture";
-        }
+          if(location === null) {
+          location = "no location for this picture";}
         let month = data.created_at.slice(5,7);
-        switch(month){
-          case '01':
-            month = "styczeń"
-          break;
-          case '02':
-            month = "luty"
-          break;
-          case '03':
-            month = "marzec"
-          break;
-          case '04':
-            month = "kwiecień"
-          break;
-          case '05':
-            month = "maj"
-          break;
-          case '06':
-            month = "czerwiec"
-          break;
-          case '07':
-            month = "lipiec"
-          break;
-          case '08':
-            month = "sierpień"
-          break;
-          case '09':
-            month = "wrzesień"
-          break;
-          case '10':
-            month = "październik"
-          break;
-          case '11':
-            month = "listopad"
-          break;
-          case '12':
-            month = "grudzień"
-          break;
-        }
+          switch(month){
+            case '01':
+              month = "styczeń"
+            break;
+            case '02':
+              month = "luty"
+            break;
+            case '03':
+              month = "marzec"
+            break;
+            case '04':
+              month = "kwiecień"
+            break;
+            case '05':
+              month = "maj"
+            break;
+            case '06':
+              month = "czerwiec"
+            break;
+            case '07':
+              month = "lipiec"
+            break;
+            case '08':
+              month = "sierpień"
+            break;
+            case '09':
+              month = "wrzesień"
+            break;
+            case '10':
+              month = "październik"
+            break;
+            case '11':
+              month = "listopad"
+            break;
+            case '12':
+              month = "grudzień"
+            break;
+          }
         document.querySelector('.bottom-left').innerHTML = `<h3 class="location">${location}</h3>`
         document.querySelector('.bottom-right').innerHTML = `<h3 class="date">${month} ${data.created_at.slice(0,4)}</h3>`
       })

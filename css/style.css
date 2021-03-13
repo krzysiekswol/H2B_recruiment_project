@@ -102,6 +102,7 @@ input#search::placeholder{
 .input-group-two{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     background-color: lightgrey;
     border: 1px solid transparent;
     border-radius: 50px;
@@ -272,9 +273,5 @@ font-size: 1rem;
 .date{
   margin-right: 5%;
 }
-
-
-
-
 .disactive{
   display: none;}
