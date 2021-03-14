@@ -1,4 +1,4 @@
-searchPhotos = () => {
+function searchPhotos () {
 let key= `WSkFlomRD-nNTRdXWHDwj4pKPvJU2n3IBJLc6HQ4LiQ`;
 let query = document.getElementById("search").value;
 let url= `https://api.unsplash.com/search/collections/?client_id=${key}&query=${query}&per_page=12`
@@ -87,12 +87,14 @@ let url= `https://api.unsplash.com/search/collections/?client_id=${key}&query=${
   )  
 }
 // ======= enter key ==========================================
-let input = document.getElementById('search');
+  let input = document.getElementById('search');
 input.addEventListener('keypress', function(e) { 
   if(e.keyCode === 13) {
     // e.preventDefault();
-    searchPhotos();}
+    searchPhotos();
+  }
 });
+
 let inputTwo = document.getElementById('searchTwo');
 inputTwo.addEventListener('keypress', function(e) { 
   if(e.keyCode === 13) {
@@ -101,7 +103,7 @@ inputTwo.addEventListener('keypress', function(e) {
 });
 
 // search photo for next site=====================================
-searchPhotosTwo = () => {
+function searchPhotosTwo () {
   let divCancel = document.querySelectorAll('.pics');
   divCancel.forEach(item => {
     item.remove();})
@@ -188,10 +190,6 @@ searchPhotosTwo = () => {
       }
     )
   }
-
-
-  
-  
 
 
 
