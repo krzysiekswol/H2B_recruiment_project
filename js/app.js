@@ -80,34 +80,32 @@ let url= `https://api.unsplash.com/search/collections/?client_id=${key}&query=${
       let btn = document.querySelector(".close")
       btn.addEventListener('click', function() {
         document.querySelector('.modal-wrap').classList.add('disactive');
-      })
-               
+      })             
       }
      )
     }
   )  
 }
-
+// ======= enter key ==========================================
 let input = document.getElementById('search');
 input.addEventListener('keypress', function(e) { 
-if(e.keyCode === 13) {
-// e.preventDefault();
-searchPhotos();
-}
-})
+  if(e.keyCode === 13) {
+    // e.preventDefault();
+    searchPhotos();}
+});
 let inputTwo = document.getElementById('searchTwo');
 inputTwo.addEventListener('keypress', function(e) { 
-if(e.keyCode === 13) {
-// e.preventDefault();
-searchPhotosTwo();
-}
-})
+  if(e.keyCode === 13) {
+    // e.preventDefault();
+    searchPhotosTwo();}
+});
 
+// search photo for next site=====================================
 searchPhotosTwo = () => {
   let divCancel = document.querySelectorAll('.pics');
   divCancel.forEach(item => {
-    item.remove();
-  })
+    item.remove();})
+
   let key= `WSkFlomRD-nNTRdXWHDwj4pKPvJU2n3IBJLc6HQ4LiQ`;
   let query = document.getElementById("searchTwo").value;
   let url= `https://api.unsplash.com/search/collections/?client_id=${key}&query=${query}&per_page=12`
@@ -134,11 +132,10 @@ searchPhotosTwo = () => {
         .then((resp) => resp.json())
         .then(function (data) {
           let location = data.location.name;
-        if(location === null) {
-          location = "no location for this picture";
-        }
+            if(location === null) {
+            location = "no location for this picture";}
           let month = data.created_at.slice(5,7);
-        switch(month){
+          switch(month){
           case '01':
             month = "styczeń"
           break;
@@ -175,10 +172,11 @@ searchPhotosTwo = () => {
           case '12':
             month = "grudzień"
           break;
-        }
+          }
         document.querySelector('.bottom-left').innerHTML = `<h3 class="location">${location}</h3>`
         document.querySelector('.bottom-right').innerHTML = `<h3 class="date">${month} ${data.created_at.slice(0,4)}</h3>`
-        })
+        }
+        )
       } 
       
       // close modal 
@@ -186,8 +184,8 @@ searchPhotosTwo = () => {
       btn.addEventListener('click', function() {
         document.querySelector('.modal-wrap').classList.add('disactive');
       })
-       })
-        }
+      })
+      }
     )
   }
 

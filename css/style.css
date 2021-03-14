@@ -1,10 +1,11 @@
+/* General rules */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
+/* first site========================================== */
 .container {
   background-image: url("/assets/img/sunset.jpg");
   width: 100vw;
@@ -42,6 +43,7 @@ h4 {
 p{
   font-size: 1.1rem;
 }
+/* Input first site */
 .input-group{
   display: flex;
   justify-content: flex-start;
@@ -80,7 +82,9 @@ input#search::placeholder{
 .fas{
   font-size: 1.3rem;
 }
-/* next site */
+
+
+/* next site======================================= */
 .wrapper{
   background-color: white;
   width: 100%;
@@ -120,6 +124,7 @@ input#search::placeholder{
   grid-column: 2 / 3;
   color: black;
 } 
+/* input next site */
 input#searchTwo{
   width: 100%;
   height: 100%;
@@ -151,6 +156,7 @@ input#searchTwo::placeholder{
 #btn2 .fas{
 font-size: 1rem;
 }
+/* pictures */
 .pics{
   flex-basis: 30%;
   /* max-width: 400px; */
@@ -273,5 +279,6 @@ font-size: 1rem;
 .date{
   margin-right: 5%;
 }
+/* disactive for elements */
 .disactive{
   display: none;}
